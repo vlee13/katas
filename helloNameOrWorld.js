@@ -5,6 +5,7 @@ hello "aliCE"  => "Hello, Alice!"
 hello          => "Hello, World!" # name not given
 hello ''       => "Hello, World!" # name is an empty String`;
 
+//solution 1
 function hello(name) {
   return name
     ? `Hello, ${name.substring(0, 1).toUpperCase()}${name
@@ -13,6 +14,28 @@ function hello(name) {
     : `Hello, World!`;
 }
 
+//solution without ternary
+// function hello(name) {
+//   if (name) {
+//     return `Hello, ${name.substring(0, 1).toUpperCase()}${name
+//       .substring(1)
+//       .toLowerCase()}!`
+//   } else {
+//     return `Hello, World!`
+//   }
+// }
+
+// function hello(name) {
+//   if (name === '' || name === undefined) {
+//     return `Hello, World!`
+//   } else {
+//     return `Hello, ${name.substring(0, 1).toUpperCase()}${name
+//       .substring(1)
+//       .toLowerCase()}!`
+//   }
+// }
+
+//solution 2
 function hello(name) {
   return name
     ? `Hello, ${name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}!`
