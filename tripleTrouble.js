@@ -6,6 +6,8 @@
 
 //https://www.codewars.com/kata/5704aea738428f4d30000914
 
+//tip: remember for loop is a counter/incrementer
+//solution
 function tripleTrouble(one, two, three) {
   let result = "";
   for (let i = 0; i < one.length; i++) {
