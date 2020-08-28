@@ -19,6 +19,6 @@ const arr = (N) => {
 //note: look at tests for including _
 const arr = (n) => Array.from({ length: n }, (_, i) => i);
 
-//solution 2 with array.keys
+//solution 3 with array.keys
 //note: spread operator for making new array
 const arr = (N) => [...Array(N || 0).keys()];
