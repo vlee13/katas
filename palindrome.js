@@ -13,6 +13,7 @@ function isPalindrome(x) {
   }
 }
 
+//Solution 1 shorthand with ternary
 function isPalindrome(x) {
   return x.split("").reverse().join("").toLowerCase() === x.toLowerCase()
     ? true

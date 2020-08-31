@@ -11,7 +11,7 @@
 //solution 1 with for loop and indexOf
 function nextId(ids) {
   for (i = 0; i < ids.length; i++) {
-    if (ids.indexOf(i) == -1) {
+    if (ids.indexOf(i) === -1) {
       return i;
     }
   }
