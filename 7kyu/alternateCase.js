@@ -4,7 +4,7 @@
 
 //Solution 1 with for loop
 function alternateCase(s) {
-  const flipLetters = [];
+  let flipLetters = [];
 
   for (let i = 0; i < s.length; i++) {
     if (s[i] === s[i].toLowerCase()) {
