@@ -11,13 +11,13 @@
 // (15, -5, 3)   ->  true
 
 //Solution 1
-// function isDivideBy(number, a, b) {
-//     console.log(a%2===0)
-//   if (number % a === 0 && number % b === 0) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+function isDivideBy(number, a, b) {
+  console.log(a % 2 === 0);
+  if (number % a === 0 && number % b === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
