@@ -5,11 +5,12 @@
 
 //Solution 1
 function solve(arr) {
-  if (arr.length === 0) return [];
-  let backwardsArray = [];
+  let newArr = [];
   for (let i = arr.length - 1; i >= 0; i--) {
-    let splitDirection = arr[i].split(" ");
+    let splitElem = arr[i].split(" ");
+    //change and store the new direction
     let direction = "";
+    //set conditions to get the correct direction
     if (i === arr.length - 1) {
       direction = "Begin";
     } else {
@@ -21,11 +22,13 @@ function solve(arr) {
           direction = "Right";
       }
     }
-    splitDirection.splice(0, 1, direction);
-    backwardsArray.push(splitDirection.join(" "));
+    splitElem.splice(0, 1, direction);
+    newArr.push(splitElem.join(" "));
   }
   return backwardsArray;
 }
+
+// ['Begin on 3rd Blvd', 'Right on First Road', 'Left on 9th Dr']
 
 //Solution 2
 function solve(arr) {
@@ -37,3 +40,5 @@ function solve(arr) {
     else return elem.replace(/Left|Right|Begin/, "Right");
   });
 }
+
+//   [ 'Left on 9th Dr', 'Right on First Road', 'Begin on 3rd Blvd' ]
