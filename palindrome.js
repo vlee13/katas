@@ -1,7 +1,9 @@
-`Write function isPalindrome that checks if a given string (case insensitive) is a palindrome.``ex: In Racket, the function is called palindrome?
+// Write function isPalindrome that checks if a given string (case insensitive) is a palindrome.``ex: In Racket, the function is called palindrome?
 
-(palindrome? "nope") ; returns #f
-(palindrome? "Yay")  ; returns #t`;
+// (palindrome? "nope") ; returns #f
+// (palindrome? "Yay")  ; returns #t;
+
+//Common interview question
 
 //Solution 1
 function isPalindrome(x) {
