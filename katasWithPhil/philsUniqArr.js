@@ -4,7 +4,7 @@
 //filter into this:
 [1, 2, 3, 4, 5];
 
-//Solution 1 with for loop
+//Solution 1
 const uniq = (arr) => {
   arr = arr.sort((a, b) => {
     a === b ? arr.pop(b) : a - b;

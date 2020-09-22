@@ -26,10 +26,10 @@
 //https://www.codewars.com/kata/57e1857d333d8e0f76002169
 
 //Solution
-function changeCount(c) {
-  var arr = c.split(" ");
+function changeCount(change) {
+  var arr = change.split(" ");
   var sum = 0;
-  for (var i = 0; i < arr.length; ++i) {
+  for (var i = 0; i < arr.length; i++) {
     if (arr[i] == "penny") sum += 0.01;
     if (arr[i] == "nickel") sum += 0.05;
     if (arr[i] == "dime") sum += 0.1;
