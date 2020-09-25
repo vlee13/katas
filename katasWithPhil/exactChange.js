@@ -19,7 +19,7 @@ function makeChange(num) {
     for (let j = 0; j < multiples; j++) {
       result.push(coins[i]);
     }
-    let remainder = num % coins[i];
+    let remainder = money % coins[i];
     money = remainder;
   }
   return result;
