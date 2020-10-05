@@ -15,4 +15,13 @@ const isDivisible = (arr) => {
   }, []);
 };
 
-isDivisible([30, 10, 15]);
+//Solution 2
+function isDivisible(arr) {
+  let result = [];
+  arr.reduce((total, cur) => {
+    if (cur % 3 === 0) {
+      result.push(cur);
+    }
+  }, 0);
+  return result;
+}
