@@ -8,15 +8,68 @@
 
 //https://www.codewars.com/kata/59f11118a5e129e591000134
 
-//Solution
+//Solution 1 with sort(), for loop
 function repeats(arr) {
-  let result = [];
-  let arr2 = arr.sort((a, b) => a - b);
-  console.log(arr2);
-  for (let i = 0; i < arr2.length; i++) {
-    arr2[i] === arr2[i + 1] ? (i = i + 1) : result.push(arr2[i]);
+  let result = 0;
+  arr.sort();
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] === arr[i + 1] ? i++ : (result += arr[i]);
+  }
+  return result;
+}
+
+//Solution 2 with sort(), for loop
+function repeats(arr) {
+  let sum = 0;
+  arr.sort();
+  for (let i = 0; i < arr.length; i += 2) {
+    if (arr[i] !== arr[i + 1]) {
+      sum += arr[i];
+      i--;
+    }
   }
 
-  console.log(result);
+  return sum;
+}
+
+//Solution 3 with filter(),reduce(),indexOf(),lastIndexOf()
+//The lastIndexOf() method returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if the value is not found.
+function repeats(arr) {
+  let result = [];
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
   return result[0] + result[1];
+}
+
+//Shortened...
+function repeats(arr) {
+  return arr
+    .filter((v) => arr.indexOf(v) === arr.lastIndexOf(v))
+    .reduce((a, b) => a + b, 0);
+}
+
+//Phil's Solution
+function repeats(arr) {
+  let sum = 0;
+
+  const numMap = arr.reduce((acc, val) => {
+    if (acc[val]) {
+      acc[val]++;
+      return acc;
+    }
+    acc[val] = 1;
+    return acc;
+  }, {});
+
+  console.log("num maps", numMap);
+
+  for (const [key, val] of Object.entries(numMap)) {
+    if (val < 2) sum += parseInt(key);
+  }
+
+  return sum;
 }
