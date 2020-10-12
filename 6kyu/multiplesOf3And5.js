@@ -30,7 +30,7 @@ function solution(number) {
   }, 0);
 }
 
-//Solution 3 one line with spread operator, filter(), reduce()
+//Solution 3 one line with filter(), reduce()
 function solution(number) {
   return number < 3
     ? 0
