@@ -5,7 +5,7 @@
 // Ex: Input = ["Anna", "Angel", "Brito", "Lisa", "Val", "Niko"],
 // Ex Output = ["Anna", "Lisa", "Niko"]`;
 
-// `https://www.codewars.com/kata/55b42574ff091733d900002f`
+// https://www.codewars.com/kata/55b42574ff091733d900002f
 
 //solution 1 with for loop
 function friend(friends) {
