@@ -32,21 +32,22 @@ function evenOrOdd(str) {
 function evenOrOdd(str) {
   let odd = 0;
   let even = 0;
-  let numbers = str.split('')
-  for(number of numbers){
-    if(number %2 === 0) {
-      even += number * 1
+  let numbers = str.split("");
+  for (number of numbers) {
+    if (number % 2 === 0) {
+      even += number * 1;
     } else {
-      odd += number * 1
+      odd += number * 1;
     }
   }
-  if(odd > even) {
-    return 'Odd is greater than Even'
+  if (odd > even) {
+    return "Odd is greater than Even";
   } else if (even > odd) {
-    return'Even is greater than Odd'
+    return "Even is greater than Odd";
   } else {
-    return 'Even and Odd are the same'
+    return "Even and Odd are the same";
   }
+}
 
 //Solution 2 with .filter() and .reduce()
 function evenOrOdd(str) {
