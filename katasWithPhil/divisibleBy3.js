@@ -8,14 +8,12 @@ const isDivisible = (arr) => {
   return arr.reduce((acc, val) => {
     if (val % 3 === 0) {
       acc.push(val);
-      return acc;
-    } else {
-      return acc;
     }
+    return acc;
   }, []);
 };
 
-//Solution 2
+//Solution 2 (in this example not really using acc)
 function isDivisible(arr) {
   let result = [];
   arr.reduce((total, cur) => {

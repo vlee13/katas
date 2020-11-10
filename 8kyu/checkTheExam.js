@@ -9,6 +9,8 @@
 // checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
 // checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
 
+//https://www.codewars.com/kata/5a3dd29055519e23ec000074
+
 //solution
 function checkExam(array1, array2) {
   let score = 0;

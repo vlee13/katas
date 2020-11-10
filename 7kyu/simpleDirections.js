@@ -3,6 +3,8 @@
 //example: solve(["Begin on Road A","Right on Road B","Right on Road C","Left on Road D"]) = ['Begin on Road D', 'Right on Road C', 'Left on Road B', 'Left on Road A']
 //example: solve(['Begin on Lua Pkwy', 'Right on Sixth Alley', 'Right on 1st Cr']) =  ['Begin on 1st Cr', 'Left on Sixth Alley', 'Left on Lua Pkwy']
 
+// https://www.codewars.com/kata/5b94d7eb1d5ed297680000ca/train/javascript
+
 //Solution 1
 function solve(arr) {
   let newArr = [];

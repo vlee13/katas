@@ -4,6 +4,8 @@
 
 // Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
 
+//https://www.codewars.com/kata/595970246c9b8fa0a8000086
+
 //one way
 function capitalizeWord(word) {
   return word.replace(word.charAt(0), word.charAt(0).toUpperCase());

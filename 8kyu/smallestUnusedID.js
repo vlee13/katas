@@ -8,6 +8,8 @@
 
 // Go on and code some pure awesomeness!
 
+//https://www.codewars.com/kata/55eea63119278d571d00006a
+
 //solution 1 with for loop and indexOf
 function nextId(ids) {
   for (i = 0; i < ids.length; i++) {

@@ -5,6 +5,8 @@
 // "abcdefghijklm" --> ["b", "d", "f", "h", "j", "l"]
 // "a"             --> "invalid string"
 
+//https://www.codewars.com/kata/566044325f8fddc1c000002c
+
 //Solution 1
 function evenChars(string) {
   console.log(string);
