@@ -29,8 +29,8 @@ function findOutlier(integers) {
 
 //Solution 2 with filter
 function findOutlier(integers) {
-  let even = integers.filter((x) => x % 2 !== 0);
-  let odd = integers.filter((x) => x % 2 === 0);
+  let even = integers.filter((x) => x % 2 === 0);
+  let odd = integers.filter((x) => x % 2 !== 0);
   if (even.length === 1) return even[0];
   else return odd[0];
 }
