@@ -33,4 +33,12 @@ function escapeVelocity(arr1, arr2, targetValue) {
 }
 
 //Solution 2 - Valentino
-function escapeVelocity(arr1, arr2, targetValue) {}
+function escapeVelocity(arr1, arr2, targetValue) {
+  let valPresent = false;
+  arr1.map((aVal) => {
+    if (arr2.includes(targetValue - aVal)) {
+      valPresent = true;
+    }
+  });
+  return valPresent;
+}
