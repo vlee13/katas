@@ -23,9 +23,9 @@ function filter_list(l) {
 //Solution 3
 function filter_list(l) {
   let newArr = [];
-  for (let i = 0; i < l.length; i++) {
-    if (l[i] >= 0 && l[i] === Number(l[i])) {
-      newArr.push(l[i]);
+  for (let i of l) {
+    if (Number.isInteger(i)) {
+      newArr.push(i);
     }
   }
   return newArr;

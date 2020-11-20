@@ -27,9 +27,9 @@
 
 //Solution
 function changeCount(change) {
-  var arr = change.split(" ");
-  var sum = 0;
-  for (var i = 0; i < arr.length; i++) {
+  let arr = change.split(" ");
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] == "penny") sum += 0.01;
     if (arr[i] == "nickel") sum += 0.05;
     if (arr[i] == "dime") sum += 0.1;
