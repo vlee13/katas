@@ -5,10 +5,15 @@
 
 //https://www.codewars.com/kata/5aa3af22ba1bb5209f000037
 
-//Solution
+//Solution 1
 function solve(eq) {
   return eq
     .split(/([*+-/])/)
     .reverse()
     .join("");
+}
+
+//Solution 2
+function solve(eq) {
+  return eq.split(/(\D)/).reverse().join("");
 }
