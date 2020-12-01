@@ -34,7 +34,7 @@ function getDrinkByProfession(param) {
 
 //Solution 2
 function getDrinkByProfession(param) {
-  var list = {
+  let objList = {
     jabroni: "Patron Tequila",
     "school counselor": "Anything with Alcohol",
     programmer: "Hipster Craft Beer",
@@ -42,5 +42,5 @@ function getDrinkByProfession(param) {
     politician: "Your tax dollars",
     rapper: "Cristal",
   };
-  return list[param.toLowerCase()] || "Beer";
+  return objList[param.toLowerCase()] || "Beer";
 }

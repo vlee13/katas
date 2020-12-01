@@ -12,7 +12,6 @@
 
 //Solution 1
 function isDivideBy(number, a, b) {
-  console.log(a % 2 === 0);
   if (number % a === 0 && number % b === 0) {
     return true;
   } else {
