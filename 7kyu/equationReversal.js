@@ -5,7 +5,7 @@
 
 //https://www.codewars.com/kata/5aa3af22ba1bb5209f000037
 
-//Solution 1
+//Solution 1 - with brackets and capturing group
 function solve(eq) {
   return eq
     .split(/([*+-/])/)
@@ -13,7 +13,7 @@ function solve(eq) {
     .join("");
 }
 
-//Solution 2
+//Solution 2 - \D (all non-digits)
 function solve(eq) {
   return eq.split(/(\D)/).reverse().join("");
 }
