@@ -9,7 +9,7 @@
 // first argument of function should be the array and the second argument is the target.  So in the first example, the target is 5.  so 5 is found in the 2nd index, so the output is 2
 // 2nd example, target is 2, but there is no 2 in the array.   So the 2 should be inserted in 1st index position, so the output of the function should be 1
 
-//Solution 1 with for loop
+//Solution 1
 function targetIndx(arr, target) {
   if (arr.includes(target)) return arr.indexOf(target);
   for (let i = 0; i < arr.length; i++) {
@@ -18,7 +18,7 @@ function targetIndx(arr, target) {
   }
 }
 
-//Solution 2 with array methods
+//Solution 2
 function targetIndx(arr, target) {
   if (arr.includes(target)) return arr.indexOf(target);
   else arr.push(target);

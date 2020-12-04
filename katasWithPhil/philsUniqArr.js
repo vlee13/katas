@@ -36,6 +36,8 @@ function solve(arr) {
 //Solution 4 with filter()
 function uniquify(arr) {
   return arr.filter((num, i) => i === arr.indexOf(num));
+  //also works with lastIndexOf
+  //return arr.filter((num, i) => i === arr.lastIndexOf(num));
 }
 
 //Solution 5 with map()
@@ -47,4 +49,14 @@ function removeDuplicates(array) {
     }
   });
   return result;
+}
+
+//Solution 6 with reduce()
+function unique(arr) {
+  return arr.reduce((acc, val) => {
+    if (acc.indexOf(val) === -1) {
+      acc.push(val);
+    }
+    return acc;
+  }, []);
 }
