@@ -10,17 +10,11 @@
 
 //Solution
 function wave(str) {
-  let result = "";
-  let arr = [];
+  let result = [];
   for (let i = 0; i < str.length; i++) {
-    if (str[i] == " ") {
-      continue;
+    if (str[i] != " ") {
+      result.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1));
     }
-    result =
-      str.substring(0, i) +
-      str[i].toUpperCase() +
-      str.substring(i + 1, str.length);
-    arr.push(result);
   }
-  return arr;
+  return result;
 }
