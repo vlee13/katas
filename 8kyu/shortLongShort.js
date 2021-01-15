@@ -5,8 +5,6 @@
 // solution("1", "22") // returns "1221"
 // solution("22", "1") // returns "1221"
 
-//https://www.codewars.com/kata/55eea63119278d571d00006a
-
 //solution 1
 function solution(a, b) {
   if (a.length > b.length) {

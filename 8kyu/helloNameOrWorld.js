@@ -48,3 +48,4 @@ function hello(name) {
 //(index) - anything after that index
 
 //charAt(index) - selects that index only
+
