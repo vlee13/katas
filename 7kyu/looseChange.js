@@ -25,7 +25,7 @@
 
 //https://www.codewars.com/kata/57e1857d333d8e0f76002169
 
-//Solution
+//Solution 1
 function changeCount(change) {
   let arr = change.split(" ");
   let sum = 0;
@@ -37,4 +37,16 @@ function changeCount(change) {
     if (arr[i] == "dollar") sum += 1;
   }
   return "$" + sum.toFixed(2);
+}
+
+//Solution 2
+function changeCount(change) {
+  return (
+    "$" +
+    change
+      .split(" ")
+      .map((x) => CHANGE[x])
+      .reduce((a, b) => a + b, 0)
+      .toFixed(2)
+  );
 }
