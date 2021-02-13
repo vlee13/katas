@@ -24,3 +24,34 @@ function makeChange(num) {
   }
   return result;
 }
+
+//refactored with map
+function makeChange(num) {
+  let coins = [25, 10, 5, 1];
+  let result = [];
+  let money = num;
+  coins.map((ele) => {
+    let multiples = parseInt(money / ele);
+    for (let i = 0; i < multiples; i++) {
+      result.push(ele);
+    }
+    money = money % ele;
+  });
+
+  return result;
+}
+
+//Solution 2 with while loop
+const sorryeh = [200, 100, 25, 10, 5, 1]
+const freedombucks = [25, 10, 5, 1]
+
+function exactChange(money, coins=freedombucks) {
+  let change = []
+  for (let i=0; i < coins.length; i++) {
+    while (money >= coins[i]) {
+        change.push(coins[i])
+        money -= coins[i]
+    }
+  }
+  return change
+}
