@@ -17,3 +17,18 @@ var moveZeros = function (arr) {
   }
   return arr2.concat(arr1);
 };
+
+//Solution 2
+const moveZeros = (arr) => {
+  for (var i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] === 0) {
+      arr.splice(i, 1);
+      arr.push(0);
+    }
+  }
+  return arr;
+};
+
+//Solution 3
+const moveZeros = (arr) =>
+  arr.filter((i) => i !== 0).concat(arr.filter((n) => n === 0));

@@ -10,6 +10,8 @@
 // (4, 1, 4)     ->  true
 // (15, -5, 3)   ->  true
 
+// https://www.codewars.com/kata/5a2b703dc5e2845c0900005a
+
 //Solution 1
 function isDivideBy(number, a, b) {
   if (number % a === 0 && number % b === 0) {

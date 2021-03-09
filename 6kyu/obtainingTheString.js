@@ -25,9 +25,9 @@
 function obtain(s, t) {
   let count = 0;
   for (let i = 0; i < s.length; i++) {
-    let index = t.indexOf(s[i]);
+    let index = t.indexOf(s[i]); //going with s loop/order but getting index of t(index also = #moves)
     if (index === -1) return -1;
-    //this will change the t thus changing the variable index on every loop
+    //this will extract desired section and make new t thus changing the variable index on every loop
     t = t.slice(0, index) + t.slice(index + 1);
     //when the letter sequence is not the same, will show how many moves it takes
     count += index;

@@ -14,6 +14,8 @@
 
 // https://www.codewars.com/kata/5f47e79e18330d001a195b55
 
+// NOTES: look into base numbers (base 10, base 2, etc...)
+
 // solution 1
 function baseFinder(seq) {
   seq = seq.join("").split("");

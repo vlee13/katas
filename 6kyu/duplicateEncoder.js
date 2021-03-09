@@ -11,7 +11,35 @@
 
 //https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
 
-//Solution
+//Solution 1
+function duplicateEncode(word) {
+  let unique = "";
+  word = word.toLowerCase();
+  for (let i = 0; i < word.length; i++) {
+    if (word.lastIndexOf(word[i]) == word.indexOf(word[i])) {
+      unique += "(";
+    } else {
+      unique += ")";
+    }
+  }
+  return unique;
+}
+
+//Solution 2
+function duplicateEncode(word) {
+  let letters = word.toLowerCase().split("");
+  return letters
+    .map(function (elm, i) {
+      return letters.some(function (ele, j) {
+        return elm === ele && i !== j;
+      })
+        ? ")"
+        : "(";
+    })
+    .join("");
+}
+
+//Solution 2
 function duplicateEncode(word) {
   word = word.toLowerCase();
   return word.replace(/./gi, function (v) {
