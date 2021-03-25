@@ -5,6 +5,8 @@
 // hello          => "Hello, World!" # name not given
 // hello ''       => "Hello, World!" # name is an empty String;
 
+//https://www.codewars.com/kata/57e3f79c9cb119374600046b
+
 //solution 1
 function hello(name) {
   return name
@@ -44,8 +46,6 @@ function hello(name) {
 
 //substring and slice very similar (start,end)
 //- substring cuts original string from start to end (not including end)
-//- slice cuts out array from start to end (not including end)
-//(index) - anything after that index
+//- slice cuts out string or array from start to end (not including end)
 
 //charAt(index) - selects that index only
-
