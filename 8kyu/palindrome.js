@@ -3,6 +3,8 @@
 // (palindrome? "nope") ; returns #false
 // (palindrome? "Yay")  ; returns #true;
 
+//https://www.codewars.com/kata/57a1fd2ce298a731b20006a4
+
 //Common interview question
 
 //Solution 1

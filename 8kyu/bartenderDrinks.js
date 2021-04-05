@@ -12,6 +12,8 @@
 
 // Make sure you cover the cases where certain words do not show up with correct capitalization. For example, getDrinkByProfession("pOLitiCIaN") should still return "Your tax dollars".
 
+// https://www.codewars.com/kata/568dc014440f03b13900001d
+
 //Solution 1
 function getDrinkByProfession(param) {
   switch (param.toLowerCase()) {
