@@ -17,3 +17,18 @@ function solve(eq) {
 function solve(eq) {
   return eq.split(/(\D)/).reverse().join("");
 }
+
+//Solution without regex
+const solve = (eq) =>
+  eq
+    .split("/")
+    .join(" / ")
+    .split("+")
+    .join(" + ")
+    .split("*")
+    .join(" * ")
+    .split("-")
+    .join(" - ")
+    .split(" ")
+    .reverse()
+    .join("");

@@ -2,8 +2,8 @@
 
 // If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
 
-// Ex: Input = ["Anna", "Angel", "Brito", "Lisa", "Val", "Niko"],
-// Ex Output = ["Anna", "Lisa", "Niko"]`;
+// Ex: Input = ["Angel", "Brito", "Lisa", "Val", "Niko"],
+// Ex Output = ["Lisa", "Niko"]`;
 
 // https://www.codewars.com/kata/55b42574ff091733d900002f
 

@@ -25,7 +25,7 @@
 
 //https://www.codewars.com/kata/57e1857d333d8e0f76002169
 
-//Solution 1
+//Solution 1 without CHANGE object
 function changeCount(change) {
   let arr = change.split(" ");
   let sum = 0;
@@ -39,7 +39,17 @@ function changeCount(change) {
   return "$" + sum.toFixed(2);
 }
 
-//Solution 2
+//Solution 2 with CHANGE object
+function changeCount(change) {
+  let arr = change.split(" ");
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += CHANGE[arr[i]];
+  }
+  return total.toFixed(2);
+}
+
+//Solution 3 with CHANGE object
 function changeCount(change) {
   return (
     "$" +

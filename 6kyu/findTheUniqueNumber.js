@@ -18,6 +18,12 @@ function findUniq(arr) {
   }
 }
 
+//Solution 1 better
+function findUniq(arr) {
+  arr.sort();
+  return arr[0] !== arr[1] ? arr[0] : arr.pop();
+}
+
 //Solution 2
 function findUniq(arr) {
   arr.sort((a, b) => a - b);
@@ -29,12 +35,6 @@ function findUniq(arr) {
 }
 
 //Solution 3
-function findUniq(arr) {
-  arr.sort();
-  return arr[0] !== arr[1] ? arr[0] : arr.pop();
-}
-
-//Solution 4
 function findUniq(arr) {
   return Number(
     arr

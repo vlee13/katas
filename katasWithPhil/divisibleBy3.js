@@ -12,14 +12,3 @@ const isDivisible = (arr) => {
     return acc;
   }, []);
 };
-
-//Solution 2 (in this example not really using acc)
-function isDivisible(arr) {
-  let result = [];
-  arr.reduce((total, cur) => {
-    if (cur % 3 === 0) {
-      result.push(cur);
-    }
-  }, 0);
-  return result;
-}
