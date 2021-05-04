@@ -41,3 +41,18 @@ function cleanString(s) {
     }, [])
     .join("");
 }
+
+//Recursive function solution
+function cleanString(s) {
+  if (!s.includes(`#`)) {
+    return s;
+  }
+  let str = s.split(``);
+  let index = s.match(`#`).index;
+  if (index === 0) {
+    str.splice(0, 1);
+  } else {
+    str.splice(index - 1, 2);
+  }
+  return cleanString(str.join(``));
+}
