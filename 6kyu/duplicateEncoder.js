@@ -29,8 +29,8 @@ function duplicateEncode(word) {
 function duplicateEncode(word) {
   let letters = word.toLowerCase().split("");
   return letters
-    .map(function (elm, i) {
-      return letters.some(function (ele, j) {
+    .map((elm, i) => {
+      return letters.some((ele, j) => {
         return elm === ele && i !== j;
       })
         ? ")"

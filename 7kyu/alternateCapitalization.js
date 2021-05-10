@@ -8,38 +8,46 @@
 
 //https://www.codewars.com/kata/59cfc000aeb2844d16000075
 
-//Solution 1
+//Solution 1 with loop on string
 function capitalize(s) {
-  let arr = s.split("");
-  let a = "";
-  let b = "";
-
-  for (let i = 0; i < arr.length; i++) {
-    if (i % 2) {
-      a += arr[i];
-      b += arr[i].toUpperCase();
+  let odd = "";
+  let even = "";
+  for (let i = 0; i < s.length; i++) {
+    if (i % 2 === 0) {
+      even += s[i].toUpperCase();
+      odd += s[i];
     } else {
-      a += arr[i].toUpperCase();
-      b += arr[i];
+      odd += s[i].toUpperCase();
+      even += s[i];
     }
   }
-  return [a, b];
-}
-
-//Solution 2
-function capitalize(s) {
-  const odd = s
-    .split("")
-    .map((elem, i) => (i % 2 !== 0 ? elem.toUpperCase() : elem))
-    .join("");
-  const even = s
-    .split("")
-    .map((elem, i) => (i % 2 === 0 ? elem.toUpperCase() : elem))
-    .join("");
   return [even, odd];
 }
 
-//Solution 3
+//Solution 2 with arrays and .map
+function capitalize(s) {
+  let odd = [];
+  let even = [];
+  let newArr = s.split("");
+  for (let i = 0; i < newArr.length; i++) {
+    if (i % 2 === 0) {
+      even.push(newArr[i].toUpperCase());
+      odd.push(newArr[i]);
+    } else {
+      odd.push(newArr[i].toUpperCase());
+      even.push(newArr[i]);
+    }
+  }
+  return [even.join(""), odd.join("")];
+}
+
+//Solution 3 refactored above solution
+const capitalize = (s) => [
+  s.split("").map((ele, i) => (!(i % 2) ? ele.toUpperCase() : ele)),
+  s.split("").map((ele, i) => (i % 2 ? ele.toUpperCase() : ele)),
+];
+
+//Solution 4
 function capitalize(s) {
   let arr = s.split("").reduce(
     (acc, val, ind) => {
