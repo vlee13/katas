@@ -7,7 +7,7 @@
 
 //Solution 1
 function solve(arr) {
-  let newArr = [];
+  let backwardsArray = [];
   for (let i = arr.length - 1; i >= 0; i--) {
     let splitElem = arr[i].split(" ");
     //change and store the new direction
@@ -25,22 +25,37 @@ function solve(arr) {
       }
     }
     splitElem.splice(0, 1, direction);
-    newArr.push(splitElem.join(" "));
+    backwardsArray.push(splitElem.join(" "));
   }
   return backwardsArray;
 }
 
-// ['Begin on 3rd Blvd', 'Right on First Road', 'Left on 9th Dr']
-
 //Solution 2
 function solve(arr) {
-  console.log(arr.reverse());
-  return arr.reverse().map((elem, index, newArr) => {
-    if (index === 0) return elem.replace(/Left|Right/, "Begin");
-    else if (newArr[index - 1].includes("Right"))
-      return elem.replace(/Left|Right|Begin/, "Left");
-    else return elem.replace(/Left|Right|Begin/, "Right");
+  let newArr = arr.map((el) => el.split(" "));
+  let dir = [];
+  let instructions = newArr.map((el) => {
+    dir.unshift(el.shift());
+    return el;
+  });
+  dir = dir.map((el) =>
+    el === "Right" ? "Left" : el === "Left" ? "Right" : "Begin"
+  );
+  dir.unshift(dir.pop());
+  return instructions.reverse().map((el, ind) => {
+    el.unshift(dir[ind]);
+    return el.join(" ");
   });
 }
 
-//   [ 'Left on 9th Dr', 'Right on First Road', 'Begin on 3rd Blvd' ]
+//Solution 3
+function solve(arr) {
+  console.log(arr.reverse());
+  return arr.reverse().map((element, index, arr) => {
+    console.log(arr[index - 1]);
+    if (index === 0) return element.replace(/Left|Right/, "Begin");
+    else if (arr[index - 1].includes("Right"))
+      return element.replace(/Left|Right|Begin/, "Left");
+    else return element.replace(/Left|Right|Begin/, "Right");
+  });
+}
