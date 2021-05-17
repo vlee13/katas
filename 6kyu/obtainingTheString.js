@@ -34,3 +34,24 @@ function obtain(s, t) {
   }
   return count;
 }
+
+//NOTES:
+function obtain(s, t) {
+  let count = 0; //0+0+3+0+1+0 = 4
+  for (let i = 0; i < s.length; i++) {
+    let index = t.indexOf(s[i]); // 0, 0, 3, 0, 1, 0
+    console.log(index, s[i]);
+    if (index === -1) return -1;
+    t = t.slice(0, index) + t.slice(index + 1);
+    //    console.log(t)
+    count += index;
+  }
+  return count;
+}
+// s: abcdef (i going thru each letter of s in the loop)
+// t: abdfec  ---- original t
+// t: bdfec   index is 0
+// t: dfec    index is 3
+// t: dfe     index is 0
+// t: fe      index is 1
+// t: f       index is 0
