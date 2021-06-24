@@ -22,8 +22,12 @@ function positiveSum(arr) {
   return arr.reduce((acc, val) => {
     if (val > 0) {
       return (acc += val);
-    } else if (val < 0) {
+    } else if (val <= 0) {
       return acc;
     }
   }, 0);
 }
+
+//One line
+const positiveSum = (arr) =>
+  arr.reduce((acc, val) => (val > 0 ? (acc += val) : acc));

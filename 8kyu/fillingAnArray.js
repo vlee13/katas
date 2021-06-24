@@ -6,6 +6,8 @@
 
 // arr(5) // => [0,1,2,3,4]
 
+//https://www.codewars.com/kata/571d42206414b103dc0006a1
+
 //solution 1 with for loop
 const arr = (N) => {
   let result = [];

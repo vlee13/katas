@@ -24,6 +24,14 @@ function largestPairSum(numbers) {
   return sum;
 }
 
+//Solution 2 using Math.max()
+function largestPairSum(numbers) {
+  let max = Math.max(...numbers);
+  numbers.splice(numbers.indexOf(max), 1);
+  let secMax = Math.max(...numbers);
+  return max + secMax;
+}
+
 // Solution 2 using sort method
 function largestPairSum(numbers) {
   numbers.sort((a, b) => b - a);
