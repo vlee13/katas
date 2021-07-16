@@ -1,8 +1,10 @@
-`Return the number (count) of vowels in the given string.
+// Return the number (count) of vowels in the given string.
 
-We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
 
-The input string will only consist of lower case letters and/or spaces.`;
+// The input string will only consist of lower case letters and/or spaces.
+
+// https://www.codewars.com/kata/54ff3102c1bad923760001f3
 
 //solution 1
 function getCount(str) {
@@ -25,5 +27,5 @@ function getCount(str) {
 }
 
 function getCount(str) {
-  return str.split("").filter((c) => "aeiouAEIOU".includes(c)).length;
+  return str.split("").filter((ele) => "aeiou".includes(ele)).length;
 }

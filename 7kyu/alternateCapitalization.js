@@ -43,7 +43,7 @@ function capitalize(s) {
 
 //Solution 3 refactored above solution
 const capitalize = (s) => [
-  s.split("").map((ele, i) => (!(i % 2) ? ele.toUpperCase() : ele)),
+  [...s].map((ele, i) => (!(i % 2) ? ele.toUpperCase() : ele)),
   s.split("").map((ele, i) => (i % 2 ? ele.toUpperCase() : ele)),
 ];
 

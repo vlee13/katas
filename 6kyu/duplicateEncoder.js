@@ -25,19 +25,15 @@ function duplicateEncode(word) {
   return unique;
 }
 
-//Solution 2
-function duplicateEncode(word) {
-  let letters = word.toLowerCase().split("");
-  return letters
-    .map((elm, i) => {
-      return letters.some((ele, j) => {
-        return elm === ele && i !== j;
-      })
-        ? ")"
-        : "(";
-    })
+//one liner
+const duplicateEncode = (word) =>
+  word
+    .toLowerCase()
+    .split("")
+    .map((ele, index, arr) =>
+      arr.indexOf(ele) !== arr.lastIndexOf(ele) ? ")" : "("
+    )
     .join("");
-}
 
 //Solution 2
 function duplicateEncode(word) {
