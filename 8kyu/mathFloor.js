@@ -1,17 +1,28 @@
-`The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+// Coding in function roundIt. function accept 1 parameter n. It's a number with a decimal point. Please use different methods based on the location of the decimal point, turn the number into an integer.
 
-For example:
+// If the decimal point is on the left side of the number (that is, the count of digits on the left of the decimal point is less than that on the right), Using ceil() method.
 
-cockroachSpeed(1.08) == 30
-Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.`;
+// roundIt(3.45) should return 4
+// If the decimal point is on the right side of the number (that is, the count of digits on the left of the decimal point is more than that on the right), Using floor() method.
 
-function cockroachSpeed(s) {
-  return Math.floor(s * 27.78);
+// roundIt(34.5) should return 34
+// If the decimal point is on the middle of the number (that is, the count of digits on the left of the decimal point is equals that on the right), Using round() method.
+
+// roundIt(34.56) should return 35
+
+//Solution 1
+function roundIt(n) {
+  let [left, right] = String(n).split(".");
+
+  if (left.length > right.length) return Math.floor(n);
+  if (left.length < right.length) return Math.ceil(n);
+  else return Math.round(n);
 }
 
-//one km/hr to cm/sec is 100000/3600 = 27.77777777778
-//multiply 27.78 to s
-//Math.floor() rounds Real number down
-
-//Real numbers:
-//The real numbers include all the rational numbers, such as the integer −5 and the fraction 4/3, and all the irrational numbers, such as √2 (1.41421356..., the square root of 2, an irrational algebraic number).
+//Solution 2
+function roundIt(n) {
+  let arr = String(n).split(".");
+  if (arr[0].length > arr[1].length) return Math.floor(n);
+  if (arr[0].length < arr[1].length) return Math.ceil(n);
+  return Math.round(n);
+}
